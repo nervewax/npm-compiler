@@ -5,8 +5,11 @@ A compiler for scss, js and asset sync, built with npm scripts.
 `yarn install` to grab all dependencies.
 
 ### Tasks
+To run a task, in terminal run `yarn [task name]`.  
+E.g. `yarn watch`.
+
 - `build:css`  
-Lint, compile and run post css on scss files.
+Lint, compile and run post css on .scss files.
 - `build:js`  
 Lint and uglify js.
 - `build:images`  
