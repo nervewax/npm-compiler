@@ -1,6 +1,20 @@
 body {
-    background: tomato;
-    color: white;
+    background: #ededed;
+}
+
+.content {
+    max-width: 600px;
+    color: #1d1d1d;
     font-family: sans-serif;
-    transform: translateX(-50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    img {
+        max-width: 300px;
+    }
+    p {
+        margin-top: 0;
+    }
 }
