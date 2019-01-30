@@ -1,10 +1,22 @@
 {
   "name": "npm-compiler",
   "version": "1.0.0",
-  "description": "",
+  "description": "A compiler for scss, js and asset sync, built with npm scripts.",
   "main": "index.js",
-  "author": "",
+  "author": "nervewax <charlie@nervewax.com>",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nervewax/npm-compiler"
+  },
+  "bugs": "https://github.com/nervewax/npm-compiler/issues",
+  "keywords": [
+    "npm",
+    "scripts",
+    "npm scripts",
+    "watch",
+    "compiler"
+  ],
   "scripts": {
     "-----------------CSS": "-----------------",
     "lint-scss": "prettier --write src/scss/*.scss",
