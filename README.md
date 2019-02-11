@@ -13,7 +13,3 @@ To run a task, in terminal run `yarn [task name]`.
 - `watch` is for development, it runs a tasks when you make changes to source files. It compiles js and scss, but only copies images, svgs and fonts to the public folder. [Livereload](https://www.npmjs.com/package/livereload) is also included.
 
 - `build` is for production, it runs all tasks in sequence. It will compile js and scss, and will minify images/svgs and copy fonts to the public folder.
-
----
-
-<small>Thanks to [damonbauer](https://github.com/damonbauer/npm-build-boilerplate), for the boilerplate used as a starting point for this.</small>
