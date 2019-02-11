@@ -14,8 +14,8 @@
 		"npm",
 		"scripts",
 		"npm scripts",
-		"watch",
-		"compiler"
+		"compiler",
+		"sass compiler"
 	],
 	"scripts": {
 		"lint-scss": "prettier --write src/scss/*.scss",
@@ -54,7 +54,6 @@
 		"pixrem": "^4.0.1",
 		"postcss-cli": "^6.1.0",
 		"prettier": "^1.15.3",
-		"reload": "^2.4.0",
 		"svgo": "^1.1.1",
 		"terser": "^3.14.1"
 	}
