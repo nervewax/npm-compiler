@@ -1,20 +1,30 @@
+$dark: #1d1d1d;
+$light: #ededed;
+
 body {
-    background: #ededed;
+	background: $light;
+	color: #1d1d1d;
+	font-family: sans-serif;
+}
+
+.wrap {
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-flow: row wrap;
 }
 
 .content {
-    max-width: 600px;
-    color: #1d1d1d;
-    font-family: sans-serif;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+	max-width: 570px;
 
-    img {
-        max-width: 300px;
-    }
-    p {
-        margin-top: 0;
-    }
+	// Test autoprefixer
+	transform: translate(0%, 0%);
+
+	img {
+		max-width: 300px;
+	}
+	p {
+		margin-top: 0;
+	}
 }
