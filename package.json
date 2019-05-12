@@ -21,30 +21,40 @@
 		"lint-scss": "prettier --write src/scss/*.scss",
 		"scss": "node-sass -o public/assets/css/ src/scss/",
 		"postcss": "postcss public/assets/css/main.css -m -o public/assets/css/main.min.css",
-		"lint-js": "eslint src/js || true",
+		"lint-js": "eslint src/js --fix",
 		"terser": "mkdirp public/assets/js && terser src/js/*.js -o public/assets/js/main.js && terser src/js/*.js -m -c -o public/assets/js/main.min.js",
+
+		"imagemin": "imagemin src/image/* --out-dir=public/assets/image",
+		"svgo": "mkdirp public/assets/svg && svgo -f src/svg -o public/assets/svg",
+
+		"livereload": "livereload .",
+
 		"clean:all": "rimraf public/assets/",
 		"clean:code": "rimraf public/assets/{css,js}",
 		"clean:assets": "rimraf public/assets/{font,image,svg}",
 		"clean": "run-s clean:*",
+
 		"copy:fonts": "cp -a src/font public/assets/",
 		"copy:assets": "cp -a src/{font,image,svg} public/assets/",
-		"imagemin": "imagemin src/image/* --out-dir=public/assets/image",
-		"svgo": "mkdirp public/assets/svg && svgo -f src/svg -o public/assets/svg",
-		"livereload": "livereload .",
+
 		"build:css": "run-s lint-scss scss postcss",
 		"build:js": "run-s lint-js terser",
 		"build:assets": "run-s imagemin svgo copy:fonts",
 		"build": "run-s clean build:*",
+		"dev": "run-p build:css build:js copy:fonts copy:assets",
+
 		"watch:css": "onchange \"src/scss\" -- run-s build:css",
 		"watch:js": "onchange \"src/js\" -- run-s build:js",
 		"watch:assets": "onchange \"src/font\" \"src/image\" \"src/svg\" -- run-s clean:assets copy:assets",
+		"watch:markup": "onchange \"**/*.html\" -- echo 'Markup'",
 		"watch": "run-p watch:* livereload"
 	},
 	"devDependencies": {
 		"autoprefixer": "^9.4.3",
+		"babel-eslint": "^10.0.1",
 		"cssnano": "^4.1.7",
 		"eslint": "^5.10.0",
+		"eslint-config-prettier": "^4.2.0",
 		"imagemin-cli": "^4.0.0",
 		"livereload": "^0.7.0",
 		"mkdirp": "^0.5.1",
