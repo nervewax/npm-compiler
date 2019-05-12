@@ -3,8 +3,17 @@ $light: #ededed;
 
 body {
 	background: $light;
-	color: #1d1d1d;
+	color: $dark;
 	font-family: sans-serif;
+}
+
+.focus--keyboard:focus {
+	outline: -webkit-focus-ring-color auto 5px;
+}
+.focus--mouse:focus {
+	-webkit-tap-highlight-color: rgba(255, 255, 255, 0) !important;
+	-webkit-focus-ring-color: rgba(255, 255, 255, 0) !important;
+	outline: none !important;
 }
 
 .wrap {
