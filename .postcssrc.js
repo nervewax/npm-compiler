@@ -6,6 +6,8 @@ module.exports = {
 		require('pixrem')({
 			atrules: true,
 		}),
-		require('cssnano'),
+		require('cssnano')({
+			discardDuplicates: false,
+		}),
 	],
 };
