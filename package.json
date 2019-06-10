@@ -1,6 +1,6 @@
 {
 	"name": "npm-compiler",
-	"version": "1.0.2",
+	"version": "1.0.3",
 	"description": "A compiler for scss, js and asset sync, built with npm scripts.",
 	"main": "index.js",
 	"author": "nervewax <charlie@nervewax.com>",
