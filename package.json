@@ -29,7 +29,6 @@
 		"livereload": "livereload .",
 		"clean:all": "rimraf $npm_package_config_out/",
 		"clean:code": "rimraf $npm_package_config_out/{css,js}",
-		"clean:assets": "rimraf $npm_package_config_out/{font,image,svg}",
 		"clean": "run-s clean:*",
 		"copy:fonts": "cp -a src/font $npm_package_config_out/",
 		"copy:assets": "cp -a src/{font,image,svg} $npm_package_config_out/",
@@ -37,13 +36,13 @@
 		"build:js": "run-s terser",
 		"build:assets": "run-s imagemin svgo copy:fonts",
 		"build:markup": "html-minifier --input-dir src --output-dir public --collapse-whitespace --remove-comments --remove-optional-tags --remove-tag-whitespace --use-short-doctype --minify-css true --minify-js true --file-ext html",
-		"build": "run-s clean build:*",
-		"dev": "run-p build:css build:js copy:fonts copy:assets",
+		"build": "mkdirp $npm_package_config_out && run-s clean build:*",
+		"dev": "mkdirp $npm_package_config_out && run-p build:css build:js copy:fonts copy:assets build:markup",
 		"watch:css": "onchange 'src/scss' -- run-s build:css",
 		"watch:js": "onchange 'src/js' -- run-s build:js",
-		"watch:assets": "onchange 'src/font' 'src/image' 'src/svg' -- run-s clean:assets copy:assets",
+		"watch:assets": "onchange 'src/font' 'src/image' 'src/svg' -- run-s copy:assets",
 		"watch:markup": "onchange 'src/**/*.html' -- run-s build:markup",
-		"watch": "run-p watch:* livereload"
+		"watch": "mkdirp $npm_package_config_out && run-p watch:* livereload"
 	},
 	"devDependencies": {
 		"autoprefixer": "^9.4.3",
