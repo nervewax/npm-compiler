@@ -8,7 +8,7 @@ First you'll need [yarn](https://yarnpkg.com/) or [npm](https://www.npmjs.com/).
 
 ### Tasks
 
-To run a task, in terminal run `yarn [task name]`.
+To run a task, in terminal run `yarn [task name]` or `npm [task name]`.
 
 - `watch` is for development, it runs a relevant task when you make changes to source files. It compiles js and scss, and copies images, svgs and fonts to the public folder. [Livereload](https://www.npmjs.com/package/livereload) is also included.
 
