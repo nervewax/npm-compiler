@@ -5,23 +5,13 @@
 	"main": "index.js",
 	"author": "nervewax <charlie@nervewax.com>",
 	"license": "ISC",
-	"browserslist": [
-		"> 5%",
-		"last 2 versions",
-		"not dead"
-	],
+	"browserslist": [ "> 5%", "last 2 versions", "not dead" ],
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/nervewax/npm-compiler"
 	},
 	"bugs": "https://github.com/nervewax/npm-compiler/issues",
-	"keywords": [
-		"npm",
-		"scripts",
-		"npm scripts",
-		"compiler",
-		"sass compiler"
-	],
+	"keywords": [ "npm", "scripts", "npm scripts", "compiler", "sass compiler" ],
 	"config": {
 		"out": "public/assets"
 	},
@@ -50,19 +40,19 @@
 		"watch": "mkdirp $npm_package_config_out && run-p watch:* livereload"
 	},
 	"devDependencies": {
-		"autoprefixer": "latest",
-		"cssnano": "latest",
-		"html-minifier": "latest",
-		"imagemin-cli": "latest",
-		"livereload": "latest",
-		"mkdirp": "latest",
-		"node-sass": "latest",
-		"npm-run-all": "latest",
-		"onchange": "latest",
-		"pixrem": "latest",
-		"postcss-cli": "latest",
-		"rimraf": "latest",
-		"svgo": "latest",
-		"terser": "latest"
+		"autoprefixer": "^9.6.1",
+		"cssnano": "^4.1.10",
+		"html-minifier": "^4.0.0",
+		"imagemin-cli": "^5.0.0",
+		"livereload": "^0.8.0",
+		"mkdirp": "^0.5.1",
+		"node-sass": "^4.12.0",
+		"npm-run-all": "^4.1.5",
+		"onchange": "^5.2.0",
+		"pixrem": "^5.0.0",
+		"postcss-cli": "^6.1.3",
+		"rimraf": "^2.6.3",
+		"svgo": "^1.3.0",
+		"terser": "^4.1.2"
 	}
 }
