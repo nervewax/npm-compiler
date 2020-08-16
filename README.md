@@ -1,10 +1,15 @@
-# npm-compiler
+# NPM Scripts Compiler
 
 A compiler for scss, js and assets, built with npm scripts.
 
+Read my [NPM Scripts blog post](https://nervewax.com/npm-scripts-compiler/) for more info.
+
 ### Install
 
-First you'll need [yarn](https://yarnpkg.com/) or [npm](https://www.npmjs.com/). Once installed, `git clone` this repo and open the dir in your terminal. You can then run `yarn` or `npm install` to grab all dependencies, this shouldn't take more than a few minutes.
+First you'll need [yarn](https://yarnpkg.com/) or [npm](https://www.npmjs.com/).  
+`git clone` this repo and open the dir in your terminal.  
+Run `yarn` or `npm install` to grab all dependencies, this shouldn't take more than a couple of minutes  
+You're good to go!
 
 ### Tasks
 
